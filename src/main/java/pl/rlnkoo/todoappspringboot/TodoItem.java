@@ -1,6 +1,7 @@
 package pl.rlnkoo.todoappspringboot;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +20,7 @@ public class TodoItem {
 
     @Getter
     @Setter
+    @NotBlank(message = "Description is required")
     private String description;
 
     @Getter
