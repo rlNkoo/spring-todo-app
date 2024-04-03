@@ -13,12 +13,10 @@
     <div class="container">
     <div class="col-md-6">
         <form action="#" th:action="@{/todo/{id}(id=${todo.id})}" th:object="${todo}" method="POST">
-
             <div class="form-group">
                 <label for="description">Description</label>
                 <input class="form-control" type="text" th:field="*{description}" id="description" placeholder="Add a description"/>
             </div>
-
             <div class="checkbox">
                 <label>
                     <input type="checkbox" th:checked="${complete} == true" th:field="*{complete}" id="complete" />

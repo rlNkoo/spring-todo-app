@@ -38,5 +38,4 @@ public class TodoFormController {
         todoItemRepository.delete(todoItem);
         return "redirect:/";
     }
-
 }

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.time.Instant;
 import java.time.ZoneId;
 
@@ -36,7 +35,6 @@ public class TodoItemController {
         if (result.hasErrors()) {
             return "add-todo-item";
         }
-
         todoItem.setCreatedDate(Instant.now());
         todoItem.setModifiedDate(Instant.now());
         todoItemRepository.save(todoItem);
